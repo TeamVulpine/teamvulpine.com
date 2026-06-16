@@ -1,6 +1,7 @@
 ---
 layout: default
 title: TeamVulpine
+description: TeamVulpine's home page
 heading-icon: /assets/images/teamvulpine.svg
 max-posts: 5
 ---

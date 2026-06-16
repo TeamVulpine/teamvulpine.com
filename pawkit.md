@@ -1,6 +1,7 @@
 ---
 layout: default
 title: PawKit
+description: PawKit's main page
 heading-icon: /assets/images/pawkit.svg
 ---
 [← Back to home](/){:.backlink}
