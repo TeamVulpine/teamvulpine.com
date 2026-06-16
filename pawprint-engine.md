@@ -4,4 +4,4 @@ title: Pawprint Engine
 ---
 [← Back to home](/){:.backlink}
 
-TODO
+Pawprint Engine is a Voxel game engine, written in Rust, for our game, Stratalia.
