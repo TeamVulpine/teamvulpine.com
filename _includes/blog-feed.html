@@ -1,0 +1,10 @@
+{% for post in site.posts limit:page.max-posts %}
+  <div>
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    {{ post.excerpt }}
+  </div>
+{% endfor %}
+
+{% if site.posts.size > page.max-posts %}
+<a href="/blog">See all blog posts →</a>
+{% endif %}

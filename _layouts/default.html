@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeamVulpine {% if page.title != "TeamVulpine" %}- {{ page.title }}{% endif %}</title>
+	<link href="/assets/css/style.css" rel="stylesheet">
+	<link href="/assets/images/teamvulpine.svg" rel="icon">
+</head>
+<body>
+  <header>
+    {% if page.heading-icon %} <img src="{{ page.heading-icon }}" alt="{{ page.title }}"> {% endif %}
+    <h1>{{ page.title }}</h1>
+    <a href="https://discord.gg/dq6uMTSJr2" target="_blank"><img src="/assets/images/discord.svg" alt="Discord"></a>
+    <a href="https://bsky.app/profile/teamvulpine.com" target="_blank"><img src="/assets/images/bluesky.svg" alt="Bluesky"></a>
+    <a href="https://github.com/TeamVulpine" target="_blank"><img src="/assets/images/github.svg" alt="Github"></a>
+  </header>
+  <article {% if page.straighten %} data-straighten="true" {% endif %}>
+    {{ content }}
+  </article>
+</body>
+</html>

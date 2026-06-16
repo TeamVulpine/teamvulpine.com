@@ -1,0 +1,91 @@
+*, ::after, ::before { position: relative; padding: 0; margin: 0; box-sizing: border-box; }
+:root {
+	--color-vulpine: #FF3B00;
+	--color-pawprint: #67C9F3;
+	--color-pawkit: #2CCD6F;
+	--shadow: 4px 4px rgb(0 0 0 / 25%);
+	font: 18px sans-serif;
+	background: var(--color-pawkit);
+}
+
+body {
+  max-width: 100ch;
+  margin: 50px auto 200px;
+}
+
+header {
+  display: flex;
+	align-items: center;
+	padding: 10px;
+	gap: 20px;
+  background: var(--color-vulpine);
+	color: white;
+	box-shadow: var(--shadow);
+}
+header h1 {
+  margin-inline-end: auto;
+	text-shadow: var(--shadow);
+}
+header img {
+  height: 2em;
+	aspect-ratio: 1;
+	filter: drop-shadow(var(--shadow));
+}
+
+article {
+  padding: 20px;
+}
+article::before {
+  content: '';
+	position: absolute;
+	inset: -40px 0;
+	z-index: -1;
+  background: var(--color-pawprint);
+	box-shadow: var(--shadow);
+	rotate: 2deg;
+}
+article[data-straighten]::before {
+  rotate: 0deg;
+  bottom: 0;
+}
+article::after { content: ''; display: block; clear: both; }
+article p {
+  margin-bottom: 1em;
+}
+article :is(h1,h2,h3,h4,h5,h6) {
+  margin-bottom: .25em;
+}
+article img {
+  box-shadow: var(--shadow);
+}
+article p:has(.float-right:only-child) {
+  margin: 0;
+}
+article :is(ul,ol) {
+  list-style-position: inside;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 1em;
+}
+.project-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+.project-grid img {
+  width: 100px;
+}
+
+.float-right {
+  float: right;
+  margin-inline-start: 15px;
+}
+.backlink {
+  text-decoration: none;
+  color: var(--color-vulpine);
+}
